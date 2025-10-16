@@ -16,4 +16,16 @@ void setup(){
 void draw(){
   //Runs continuously linearly
 }
+
+// This is a for loop
+/* This is a high level structure
+for(start,condition, increment){
+}
+*/
+int value = 5;
+for(int i-0; i < value; i++){
+// do something
+}
+
 ```
+
