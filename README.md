@@ -24,8 +24,16 @@ void draw(){
   int value = 5;
   for(int i=0; i < value; i++){
   ellipse(i*100,200,50,50);
-}
-
+  }
+  // This is a condition
+  int x=0;
+  int y=1;
+  if(x<y){
+  //do something
+  }
+  else{
+  //do something else
+  }
 }
 
 ```
