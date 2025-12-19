@@ -1,0 +1,43 @@
+#include <Adafruit_NeoPixel.h> 
+// Macro for including a file
+// Pin where the SK6812 LED is connected on M5Stamp C3U
+#define LED_PIN 2
+// Number of LEDs (M5Stamp C3U has 1 built-in RGB LED)
+#define NUM_LEDS 1
+// Create NeoPixel object
+int x = 11;
+int direction = 1;
+Adafruit_NeoPixel pixels(NUM_LEDS, LED_PIN, NEO_GRB + NEO_KHZ800);
+// Helper function to set LED color
+void setLED(uint8_t r, uint8_t g, uint8_t b) 
+{  
+  pixels.setPixelColor(0, pixels.Color(r, g, b));
+    pixels.show();
+  }
+  void setup() 
+  {
+  pixels.begin();   
+  // Initialize NeoPixel  
+  pixels.clear();   
+  // Turn off LED at start
+  }
+  void loop() {  
+    // Cycle through blue shades with 0.1 second delay   
+      setLED(x, x, 255);  
+       // Blue  
+      if (x < 10){
+        direction= 1;
+        x ++;
+      }
+      if (x > 150)
+        direction = -1;
+        x--;
+      if (direction = -1){
+        x--;
+      }
+      if (direction = 1){
+        x ++;
+      }
+      
+       delay(100);
+  }
